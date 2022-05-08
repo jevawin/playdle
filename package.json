@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "All the *dle games in one handy place.",
   "main": "index.js",
-  "engines": {
-    "npm": "^8.5.2",
-    "node": "^17.7.2"
-  },
   "scripts": {
     "develop_css": "npx tailwindcss -i src/includes/styles/input.css -o dist/output.css --watch",
     "develop_js": "mkdir -p dist && cp src/includes/scripts/input.js dist/output.js",
