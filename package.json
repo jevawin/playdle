@@ -15,7 +15,8 @@
     "captures": "rm -R dist/screenshots && mkdir dist/screenshots && node captures.mjs",
     "localhost": "npx localhost dist",
     "develop": "run-p captures develop_css develop_js develop_json develop_html localhost",
-    "dev": "npm run develop"
+    "dev": "npm run develop",
+    "build": "run-p captures build_css build_js build_json build_html"
   },
   "author": "Jamie Evawin",
   "license": "ISC",
