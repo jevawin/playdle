@@ -4,8 +4,26 @@
   "description": "All the *dle games in one handy place.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "develop_css": "npx tailwindcss -i src/includes/styles/input.css -o dist/output.css --watch",
+    "develop_js": "mkdir -p dist && cp src/includes/scripts/input.js dist/output.js",
+    "develop_json": "mkdir -p dist && cp src/includes/scripts/sites.json dist/sites.json",
+    "develop_html": "mkdir -p dist && cp src/index.html dist/index.html",
+    "build_css": "npx tailwindcss -i ./src/includes/styles/input.css -o ./dist/output.css",
+    "build_js": "mkdir -p dist && cp src/includes/scripts/input.js dist/output.js",
+    "build_json": "mkdir -p dist && cp src/includes/scripts/sites.json dist/sites.json",
+    "build_html": "mkdir -p dist && cp src/index.html dist/index.html",
+    "captures": "rm -R dist/screenshots && mkdir dist/screenshots && node captures.mjs",
+    "localhost": "npx localhost dist",
+    "develop": "run-p captures develop_css develop_js develop_json develop_html localhost",
+    "dev": "npm run develop",
+    "build": "run-p captures build_css build_js build_json build_html"
   },
   "author": "Jamie Evawin",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "capture-website": "^2.3.0",
+    "localhost": "^0.4.0",
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^3.0.24"
+  }
 }
