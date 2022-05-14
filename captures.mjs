@@ -3,8 +3,9 @@ import { readFile } from "fs/promises";
 
 // capture settings
 const settings = {
-  emulateDevice: "iPad",
+  emulateDevice: "iPad landscape",
   type: "webp",
+  overwrite: true
 };
 
 // get urls
@@ -16,7 +17,7 @@ const sites = JSON.parse(await readFile("src/includes/scripts/sites.json"));
     for await (const game of value.games) {
       await captureWebsite.file(
         game.url,
-        `dist/screenshots/${encodeURI(game.name).toLowerCase()}.png`,
+        `dist/screenshots/${encodeURI(game.name.replaceAll(" ", "_")).toLowerCase()}.png`,
         settings
       );
     };

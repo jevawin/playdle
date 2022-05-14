@@ -12,7 +12,7 @@
     "build_js": "mkdir -p dist && cp src/includes/scripts/input.js dist/output.js",
     "build_json": "mkdir -p dist && cp src/includes/scripts/sites.json dist/sites.json",
     "build_html": "mkdir -p dist && cp src/index.html dist/index.html",
-    "captures": "rm -rf dist/screenshots && mkdir dist/screenshots && node captures.mjs",
+    "captures": "mkdir -p dist/screenshots && node captures.mjs",
     "localhost": "npx localhost dist",
     "develop": "run-p captures develop_css develop_js develop_json develop_html localhost",
     "dev": "npm run develop",
