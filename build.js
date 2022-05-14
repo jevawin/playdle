@@ -50,7 +50,7 @@ commands.push(tasks.css);
 /* Build: js */
 tasks.js = {
   name: "js",
-  args: ["cp", "src/includes/scripts/input.js", "dist/output.js"],
+  args: ["uglifyjs", "src/includes/scripts/input.js", "-cmo", "dist/output.js"],
   // disabled: true,
 };
 commands.push(tasks.js);
