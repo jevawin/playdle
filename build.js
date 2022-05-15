@@ -92,24 +92,14 @@ commands.push(...tasks.captures);
 /* BROWSER-SYNC */
 tasks.browserStart = {
   name: "browser-sync",
-  args: [
-    "npx",
-    "browser-sync",
-    "start",
-    "--cwd",
-    "'dist'",
-    "--no-open",
-    "--port",
-    "'8080'",
-    "--server",
-  ],
+  args: ["npx", "browser-sync", "start", "--server", "dist", "--port", "8080", "--no-open", "--no-ui", "--no-notify"],
   // disabled: true,
 };
 if (!prod) commands.push(tasks.browserStart);
 
 tasks.browserReload = {
   name: "browser-sync:reload",
-  args: ["npx", "browser-sync", "reload", "--url", "'http://localhost:8080'"],
+  args: ["npx", "browser-sync", "reload", "--port", "8080"],
 };
 
 /* WATCH */
