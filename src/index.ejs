@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Playdle. Wordle and other games.</title>
+    <meta charset="utf-8" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+    <link rel="manifest" href="/icons/manifest.json" />
+    <meta name="msapplication-TileColor" content="rgb(30, 41, 59)" />
+    <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="rgb(30, 41, 59)" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="font-sans bg-slate-800 text-white">
+    <main class="container mx-auto p-2">
+      <% for (const [key, value] of Object.entries(sites)) { %>
+      <div class="mb-6">
+        <div class="mb-4">
+          <h1 class="font-bold text-2xl uppercase"><%= key %></h1>
+          <p class=""><%= value.description %></p>
+        </div>
+        <div class="grid gap-2 grid-cols-2 md:grid-cols-4">
+        <% value.games.forEach((game) => { %>
+          <% const image = `screenshots/${encodeURI(game.name.replaceAll(" ", "_")).toLowerCase()}` %>
+          <div class="rounded overflow-hidden shadow flex flex-col justify-start p-2 bg-slate-600 bg-[url('<%= image %>')]">
+            <picture>
+              <source srcset="<%= image %>.webp" type="image/webp" />
+              <img
+                src="<%= image %>.jpeg"
+                class="w-full h-auto rounded overflow-hidden"
+                loading="lazy"
+                alt="<%= game.name %>: <%= game.description %>"
+              />
+            </picture>
+            <h2 class="font-bold text-lg mt-2"><%= game.name %></h2>
+            <p class="mb-2"><%= game.description %></p>
+            <a
+              target="_blank"
+              href="<%= game.url %>"
+              class="block rounded bg-green-600 text-white font-bold px-1 py-3 text-center border-green-700 border-b-2 border-r-2 active:border-r-0 active:border-b-0 transition-all justify-self-end mt-auto"
+              >Play <%= game.name %></a>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+      <% } %>
+    </main>
+    <div class="fixed w-full h-4 -top-4 shadow overflow-visible"></div>
+    <footer class="container mx-auto p-2">
+      <p class="text-lg mb-4">
+        Built with
+        <span class="inline-block text-red-600 motion-safe:animate-bounce text-xl">♥</span> by
+        <a
+          href="https://jamie.evawin.uk/"
+          target="_blank"
+          class="border-b border-yellow-500 text-yellow-500"
+          >Jamie Evawin</a
+        >.
+      </p>
+      <p>
+        For <em>even more</em> Wordle-like games, check out
+        <a
+          href="https://medium.com/floodgates/the-complete-and-authoritative-list-of-wordle-spinoffs-fb00bfafc448"
+          target="_blank"
+          class="border-b border-yellow-500 text-yellow-500"
+          >this excellent post by Drew Patty</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>

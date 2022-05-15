@@ -10,7 +10,7 @@ const settings = {
 };
 
 // get urls
-const sites = JSON.parse(await readFile("src/includes/scripts/sites.json"));
+const sites = JSON.parse(await readFile("src/includes/scripts/sites.json")).sites;
 
 // loop and capture
 (async () => {
