@@ -3,8 +3,8 @@ import { readFile } from "fs/promises";
 
 // capture settings
 const settings = {
-  emulateDevice: "iPad landscape",
-  type: "webp",
+  width: 300,
+  height: 225,
   overwrite: true,
   removeElements: ["#pz-gdpr", "[id*='sp_message_container']"],
 };
@@ -16,11 +16,11 @@ const sites = JSON.parse(await readFile("src/includes/scripts/sites.json"));
 (async () => {
   for await (const [key, value] of Object.entries(sites)) {
     for await (const game of value.games) {
-      await captureWebsite.file(
-        game.url,
-        `dist/screenshots/${encodeURI(game.name.replaceAll(" ", "_")).toLowerCase()}.webp`,
-        settings
-      );
+      for await (const ext of ["webp", "jpeg"]) {
+        const localSettings = settings;
+        localSettings.type = ext;
+        await captureWebsite.file(game.url, `dist/screenshots/${encodeURI(game.name.replaceAll(" ", "_")).toLowerCase()}.${ext}`, settings);
+      }
     };
   }
 })();
