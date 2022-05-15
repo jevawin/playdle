@@ -1,182 +1,184 @@
 {
-  "dle": {
-    "description": "Classic Wordle, and the *dle homages.",
-    "games": [
-      {
-        "name": "Wordle",
-        "description": "The original...and best?",
-        "url": "https://www.nytimes.com/games/wordle/index.html"
-      },
-      {
-        "name": "Worldle",
-        "description": "Guess the country.",
-        "url": "https://worldle.teuteuf.fr"
-      },
-      {
-        "name": "Heardle",
-        "description": "Guess the song.",
-        "url": "https://www.heardle.app"
-      },
-      {
-        "name": "Moviedle",
-        "description": "A movie in a second.",
-        "url": "https://www.moviedle.app"
-      },
-      {
-        "name": "Posterdle",
-        "description": "A movie in poster.",
-        "url": "https://www.posterdle.com"
-      },
-      {
-        "name": "Gamedle",
-        "description": "For gamers.",
-        "url": "http://www.gamedle.wtf/"
-      },
-      {
-        "name": "Lewdle",
-        "description": "Like Wordle. A bit spicy 🌶.",
-        "url": "https://www.lewdlegame.com"
-      },
-      {
-        "name": "Nerdle",
-        "description": "For number crunchers.",
-        "url": "https://nerdlegame.com"
-      }
-    ]
-  },
-  "moredle": {
-    "description": "Wordle, but more.",
-    "games": [
-      {
-        "name": "Dordle",
-        "description": "Two Wordles at once.",
-        "url": "https://zaratustra.itch.io/dordle"
-      },
-      {
-        "name": "Quordle",
-        "description": "Four Wordles at once.",
-        "url": "https://www.quordle.com/#/"
-      },
-      {
-        "name": "Octordle",
-        "description": "Eight Wordles at once.",
-        "url": "https://octordle.com"
-      },
-      {
-        "name": "Sedecordle",
-        "description": "Sixteen Wordles at once.",
-        "url": "https://www.sedecordle.com"
-      },
-      {
-        "name": "Hexacordle",
-        "description": "Your eyes will hurt.",
-        "url": "https://hexadecordle.co.uk/?mode=daily"
-      },
-      {
-        "name": "Duotrigordle",
-        "description": "Brain...bleeding.",
-        "url": "https://duotrigordle.com/"
-      }
-    ]
-  },
-  "nondle": {
-    "description": "Non-dle ways to waste 10 minutes. 💪",
-    "games": [
-      {
-        "name": "Framed",
-        "description": "Guess the movie, a frame at a time.",
-        "url": "https://framed.wtf"
-      },
-      {
-        "name": "High Score Day",
-        "description": "Also for gamers.",
-        "url": "https://www.highscoreday.com"
-      },
-      {
-        "name": "Sudoku",
-        "description": "Classic.",
-        "url": "https://www.nytimes.com/puzzles/sudoku/easy"
-      }
-    ]
-  },
-  "internationadle": {
-    "description": "Wordle around the world. 🌎",
-    "games": [
-      {
-        "name": "German Wordle",
-        "description": "🇩🇪",
-        "url": "https://wordle.at"
-      },
-      {
-        "name": "Spanish Wordle",
-        "description": "🇪🇸",
-        "url": "https://wordle.danielfrg.com/"
-      },
-      {
-        "name": "French Wordle",
-        "description": "🇫🇷",
-        "url": "https://wordle.louan.me/"
-      },
-      {
-        "name": "Italian Wordle",
-        "description": "🇮🇹",
-        "url": "https://pietroppeter.github.io/wordle-it/"
-      },
-      {
-        "name": "Dutch Wordle",
-        "description": "🇳🇱",
-        "url": "http://woordle.nl/"
-      },
-      {
-        "name": "Irish Wordle",
-        "description": "🇮🇪",
-        "url": "https://www.foclach.com/"
-      },
-      {
-        "name": "Hungarian Wordle",
-        "description": "🇭🇺",
-        "url": "https://szavazo.reya.hu/"
-      },
-      {
-        "name": "Indonesian Wordle",
-        "description": "🇮🇩",
-        "url": "https://katla.vercel.app/"
-      },
-      {
-        "name": "Ukranian Wordle",
-        "description": "🇺🇦",
-        "url": "https://wordle-ua.net/"
-      },
-      {
-        "name": "Portugese Wordle",
-        "description": "🇵🇹",
-        "url": "https://wordlegame.org/pt"
-      },
-      {
-        "name": "Greek Wordle",
-        "description": "🇬🇷",
-        "url": "https://jtauber.github.io/gnt-wordle/"
-      },
-      {
-        "name": "Turkish Wordle",
-        "description": "🇹🇷",
-        "url": "https://www.bundle.app/wordle-tr/"
-      },
-      {
-        "name": "Hindi Wordle",
-        "description": "🇮🇳",
-        "url": "https://kach.github.io/shabdle/"
-      },
-      {
-        "name": "Japanese Wordle",
-        "description": "🇯🇵",
-        "url": "https://plum-chloride.jp/kotonoha-tango/index.html"
-      },
-      {
-        "name": "Polish Wordle",
-        "description": "🇵🇱",
-        "url": "https://literalnie.fun/"
-      }
-    ]
+  "sites": {
+    "dle": {
+      "description": "Classic Wordle, and the *dle homages.",
+      "games": [
+        {
+          "name": "Wordle",
+          "description": "The original...and best?",
+          "url": "https://www.nytimes.com/games/wordle/index.html"
+        },
+        {
+          "name": "Worldle",
+          "description": "Guess the country.",
+          "url": "https://worldle.teuteuf.fr"
+        },
+        {
+          "name": "Heardle",
+          "description": "Guess the song.",
+          "url": "https://www.heardle.app"
+        },
+        {
+          "name": "Moviedle",
+          "description": "A movie in a second.",
+          "url": "https://www.moviedle.app"
+        },
+        {
+          "name": "Posterdle",
+          "description": "A movie in poster.",
+          "url": "https://www.posterdle.com"
+        },
+        {
+          "name": "Gamedle",
+          "description": "For gamers.",
+          "url": "http://www.gamedle.wtf/"
+        },
+        {
+          "name": "Lewdle",
+          "description": "Like Wordle. A bit spicy 🌶.",
+          "url": "https://www.lewdlegame.com"
+        },
+        {
+          "name": "Nerdle",
+          "description": "For number crunchers.",
+          "url": "https://nerdlegame.com"
+        }
+      ]
+    },
+    "moredle": {
+      "description": "Wordle, but more.",
+      "games": [
+        {
+          "name": "Dordle",
+          "description": "Two Wordles at once.",
+          "url": "https://zaratustra.itch.io/dordle"
+        },
+        {
+          "name": "Quordle",
+          "description": "Four Wordles at once.",
+          "url": "https://www.quordle.com/#/"
+        },
+        {
+          "name": "Octordle",
+          "description": "Eight Wordles at once.",
+          "url": "https://octordle.com"
+        },
+        {
+          "name": "Sedecordle",
+          "description": "Sixteen Wordles at once.",
+          "url": "https://www.sedecordle.com"
+        },
+        {
+          "name": "Hexacordle",
+          "description": "Your eyes will hurt.",
+          "url": "https://hexadecordle.co.uk/?mode=daily"
+        },
+        {
+          "name": "Duotrigordle",
+          "description": "Brain...bleeding.",
+          "url": "https://duotrigordle.com/"
+        }
+      ]
+    },
+    "nondle": {
+      "description": "Non-dle ways to waste 10 minutes. 💪",
+      "games": [
+        {
+          "name": "Framed",
+          "description": "Guess the movie, a frame at a time.",
+          "url": "https://framed.wtf"
+        },
+        {
+          "name": "High Score Day",
+          "description": "Also for gamers.",
+          "url": "https://www.highscoreday.com"
+        },
+        {
+          "name": "Sudoku",
+          "description": "Classic.",
+          "url": "https://www.nytimes.com/puzzles/sudoku/easy"
+        }
+      ]
+    },
+    "internationadle": {
+      "description": "Wordle around the world. 🌎",
+      "games": [
+        {
+          "name": "German Wordle",
+          "description": "🇩🇪",
+          "url": "https://wordle.at"
+        },
+        {
+          "name": "Spanish Wordle",
+          "description": "🇪🇸",
+          "url": "https://wordle.danielfrg.com/"
+        },
+        {
+          "name": "French Wordle",
+          "description": "🇫🇷",
+          "url": "https://wordle.louan.me/"
+        },
+        {
+          "name": "Italian Wordle",
+          "description": "🇮🇹",
+          "url": "https://pietroppeter.github.io/wordle-it/"
+        },
+        {
+          "name": "Dutch Wordle",
+          "description": "🇳🇱",
+          "url": "http://woordle.nl/"
+        },
+        {
+          "name": "Irish Wordle",
+          "description": "🇮🇪",
+          "url": "https://www.foclach.com/"
+        },
+        {
+          "name": "Hungarian Wordle",
+          "description": "🇭🇺",
+          "url": "https://szavazo.reya.hu/"
+        },
+        {
+          "name": "Indonesian Wordle",
+          "description": "🇮🇩",
+          "url": "https://katla.vercel.app/"
+        },
+        {
+          "name": "Ukranian Wordle",
+          "description": "🇺🇦",
+          "url": "https://wordle-ua.net/"
+        },
+        {
+          "name": "Portugese Wordle",
+          "description": "🇵🇹",
+          "url": "https://wordlegame.org/pt"
+        },
+        {
+          "name": "Greek Wordle",
+          "description": "🇬🇷",
+          "url": "https://jtauber.github.io/gnt-wordle/"
+        },
+        {
+          "name": "Turkish Wordle",
+          "description": "🇹🇷",
+          "url": "https://www.bundle.app/wordle-tr/"
+        },
+        {
+          "name": "Hindi Wordle",
+          "description": "🇮🇳",
+          "url": "https://kach.github.io/shabdle/"
+        },
+        {
+          "name": "Japanese Wordle",
+          "description": "🇯🇵",
+          "url": "https://plum-chloride.jp/kotonoha-tango/index.html"
+        },
+        {
+          "name": "Polish Wordle",
+          "description": "🇵🇱",
+          "url": "https://literalnie.fun/"
+        }
+      ]
+    }
   }
 }

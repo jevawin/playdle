@@ -52,7 +52,7 @@ commands.push(tasks.css);
 tasks.js = {
   name: "js",
   args: ["uglifyjs", "src/includes/scripts/input.js", "-cmo", "dist/output.js"],
-  // disabled: true,
+  disabled: true,
 };
 commands.push(tasks.js);
 
@@ -67,7 +67,7 @@ commands.push(tasks.json);
 /* Build: html */
 tasks.html = {
   name: "html",
-  args: ["cp", "src/index.html", "dist/index.html"],
+  args: ["npx", "ejs", "src/index.ejs", "-f", "src/includes/scripts/sites.json", "-o", "dist/index.html"],
   // disabled: true,
 };
 commands.push(tasks.html);
