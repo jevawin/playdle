@@ -80,7 +80,7 @@
     ]
   },
   "nondle": {
-    "description": "Non-dle ways to waste 10 minutes 💪.",
+    "description": "Non-dle ways to waste 10 minutes. 💪",
     "games": [
       {
         "name": "Framed",
@@ -96,6 +96,86 @@
         "name": "Sudoku",
         "description": "Classic.",
         "url": "https://www.nytimes.com/puzzles/sudoku/easy"
+      }
+    ]
+  },
+  "internationadle": {
+    "description": "Wordle around the world. 🌎",
+    "games": [
+      {
+        "name": "German Wordle",
+        "description": "🇩🇪",
+        "url": "https://wordle.at"
+      },
+      {
+        "name": "Spanish Wordle",
+        "description": "🇪🇸",
+        "url": "https://wordle.danielfrg.com/"
+      },
+      {
+        "name": "French Wordle",
+        "description": "🇫🇷",
+        "url": "https://wordle.louan.me/"
+      },
+      {
+        "name": "Italian Wordle",
+        "description": "🇮🇹",
+        "url": "https://pietroppeter.github.io/wordle-it/"
+      },
+      {
+        "name": "Dutch Wordle",
+        "description": "🇳🇱",
+        "url": "http://woordle.nl/"
+      },
+      {
+        "name": "Irish Wordle",
+        "description": "🇮🇪",
+        "url": "https://www.foclach.com/"
+      },
+      {
+        "name": "Hungarian Wordle",
+        "description": "🇭🇺",
+        "url": "https://szavazo.reya.hu/"
+      },
+      {
+        "name": "Indonesian Wordle",
+        "description": "🇮🇩",
+        "url": "https://katla.vercel.app/"
+      },
+      {
+        "name": "Ukranian Wordle",
+        "description": "🇺🇦",
+        "url": "https://wordle-ua.net/"
+      },
+      {
+        "name": "Portugese Wordle",
+        "description": "🇵🇹",
+        "url": "https://wordlegame.org/pt"
+      },
+      {
+        "name": "Greek Wordle",
+        "description": "🇬🇷",
+        "url": "https://jtauber.github.io/gnt-wordle/"
+      },
+      {
+        "name": "Turkish Wordle",
+        "description": "🇹🇷",
+        "url": "https://www.bundle.app/wordle-tr/"
+      },
+      {
+        "name": "Hindi Wordle",
+        "description": "🇮🇳",
+        "url": "https://kach.github.io/shabdle/"
+      },
+      {
+        "name": "Japanese Wordle",
+        "description": "🇯🇵",
+        "url": "https://plum-chloride.jp/kotonoha-tango/index.html"
+      },
+      {
+        "name": "Polish Wordle",
+        "description": "🇵🇱",
+        "url": "https://literalnie.fun/"
       }
     ]
   }
