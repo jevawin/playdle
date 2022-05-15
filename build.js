@@ -45,7 +45,7 @@ tasks.css = {
   args: ["npx", "tailwindcss", "-i", "src/includes/styles/input.css", "-o", "dist/output.css"],
   // disabled: true,
 };
-if (prod) css.args.push("--minify");
+if (prod) tasks.css.args.push("--minify");
 commands.push(tasks.css);
 
 /* Build: js */
