@@ -48,14 +48,6 @@ tasks.css = {
 if (prod) tasks.css.args.push("--minify");
 commands.push(tasks.css);
 
-/* Build: js */
-tasks.js = {
-  name: "js",
-  args: ["uglifyjs", "src/includes/scripts/input.js", "-cmo", "dist/output.js"],
-  disabled: true,
-};
-commands.push(tasks.js);
-
 /* Build: json */
 tasks.json = {
   name: "json",
@@ -68,12 +60,14 @@ commands.push(tasks.json);
 tasks.html = {
   name: "html",
   args: [
+    // ejs templates
     "npx",
     "ejs",
     "src/index.ejs",
     "-f",
     "src/includes/scripts/sites.json",
     "|",
+    // html minification
     "npx",
     "html-minifier",
     "-o",
