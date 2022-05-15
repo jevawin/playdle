@@ -5,7 +5,8 @@ import { readFile } from "fs/promises";
 const settings = {
   emulateDevice: "iPad landscape",
   type: "webp",
-  overwrite: true
+  overwrite: true,
+  removeElements: ["#pz-gdpr", "[id*='sp_message_container']"],
 };
 
 // get urls
@@ -17,7 +18,7 @@ const sites = JSON.parse(await readFile("src/includes/scripts/sites.json"));
     for await (const game of value.games) {
       await captureWebsite.file(
         game.url,
-        `dist/screenshots/${encodeURI(game.name.replaceAll(" ", "_")).toLowerCase()}.png`,
+        `dist/screenshots/${encodeURI(game.name.replaceAll(" ", "_")).toLowerCase()}.webp`,
         settings
       );
     };

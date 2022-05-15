@@ -1,5 +1,4 @@
-const util = require("node:util");
-const exec = util.promisify(require("node:child_process").exec);
+const { exec } = require("node:child_process");
 require("dotenv").config();
 const prod = process.env.NODE_ENV === "production";
 const tasks = {};
@@ -12,21 +11,22 @@ function init() {
 
 /* EXEC */
 async function execute(commands) {
-  for await (const command of commands) {
+  for (const command of commands) {
     if (!command.disabled) {
       const cmd = command.args.join(" ");
       const name = command.name;
 
       console.info(`Running: ${name} (${cmd})`);
 
-      exec(cmd)
-        .then(() => {
-          console.info(`Complete: ${name}`);
-        })
-        .catch((error) => {
+      exec(cmd, (error, stdout, stderr) => {
+        if (error) {
           console.error(`Error in command: ${name}. Error: ${error}`);
           process.exit();
-        });
+        }
+        if (stdout && stdout !== "") console.log(`${name}: ${stdout}`);
+        if (stderr && stderr !== "") console.error(`${name}: ${stderr}`);
+        console.log(`Complete: ${name}`);
+      });
     }
   }
 }
@@ -89,25 +89,47 @@ commands.push(...tasks.captures);
 
 /* DEV */
 
-/* LOCALHOST */
-tasks.localhost = {
-  name: "localhost",
-  args: ["npx", "localhost", "dist"],
+/* BROWSER-SYNC */
+tasks.browserStart = {
+  name: "browser-sync",
+  args: [
+    "npx",
+    "browser-sync",
+    "start",
+    "--cwd",
+    "'dist'",
+    "--no-open",
+    "--port",
+    "'8080'",
+    "--server",
+  ],
   // disabled: true,
 };
-if (!prod) commands.push(tasks.localhost);
+if (!prod) commands.push(tasks.browserStart);
+
+tasks.browserReload = {
+  name: "browser-sync:reload",
+  args: ["npx", "browser-sync", "reload", "--url", "'http://localhost:8080'"],
+};
 
 /* WATCH */
 if (!prod) {
   const watch = require("node-watch");
   const watchOptions = {
     recursive: true,
-    filter: /\.(html|css|js(on)?)$/
+    filter: /\.(html|css|js(on)?)$/,
   };
   watch("src", watchOptions, (evt, name) => {
-    for (const ext of ["css", "html", "js", "json"]) {
-      const re = new RegExp(`\.${ext}$`);
-      if (re.test(name)) execute([tasks[ext]]);
+    if (evt === "update") {
+      for (const ext of ["css", "html", "js", "json"]) {
+        // Iterate over extensions, build if extension was saved
+        const re = new RegExp(`\.${ext}$`);
+        if (re.test(name)) execute([tasks[ext]]);
+      }
+      // Also run tailwind for js/html
+      if (/js|html$/.test(name)) execute([tasks.css]);
+      // Reload browsers
+      execute([tasks.browserReload]);
     }
   });
 }
