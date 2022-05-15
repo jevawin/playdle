@@ -72,6 +72,14 @@ tasks.html = {
 };
 commands.push(tasks.html);
 
+/* Build: icons */
+tasks.icons = {
+  name: "icons",
+  args: ["cp", "-r", "src/icons", "dist/icons"],
+  // disabled: true,
+};
+commands.push(tasks.icons);
+
 /* Build: captures */
 tasks.captures = [
   {
