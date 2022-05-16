@@ -48,14 +48,6 @@ tasks.css = {
 if (prod) tasks.css.args.push("--minify");
 commands.push(tasks.css);
 
-/* Build: js */
-tasks.js = {
-  name: "js",
-  args: ["uglifyjs", "src/includes/scripts/input.js", "-cmo", "dist/output.js"],
-  disabled: true,
-};
-commands.push(tasks.js);
-
 /* Build: json */
 tasks.json = {
   name: "json",
@@ -67,7 +59,29 @@ commands.push(tasks.json);
 /* Build: html */
 tasks.html = {
   name: "html",
-  args: ["npx", "ejs", "src/index.ejs", "-f", "src/includes/scripts/sites.json", "-o", "dist/index.html"],
+  args: [
+    // ejs templates
+    "npx",
+    "ejs",
+    "src/index.ejs",
+    "-f",
+    "src/includes/scripts/sites.json",
+    "|",
+    // html minification
+    "npx",
+    "html-minifier",
+    "-o",
+    "dist/index.html",
+    "--collapse-whitespace",
+    "--remove-attribute-quotes",
+    "--remove-comments",
+    "--remove-optional-tags",
+    "--remove-redundant-attributes",
+    "--remove-script-type-attributes",
+    "--use-short-doctype",
+    "--sort-attributes",
+    "--sort-class-name",
+  ],
   // disabled: true,
 };
 commands.push(tasks.html);
@@ -100,7 +114,18 @@ commands.push(...tasks.captures);
 /* BROWSER-SYNC */
 tasks.browserStart = {
   name: "browser-sync",
-  args: ["npx", "browser-sync", "start", "--server", "dist", "--port", "8080", "--no-open", "--no-ui", "--no-notify"],
+  args: [
+    "npx",
+    "browser-sync",
+    "start",
+    "--server",
+    "dist",
+    "--port",
+    "8080",
+    "--no-open",
+    "--no-ui",
+    "--no-notify",
+  ],
   // disabled: true,
 };
 if (!prod) commands.push(tasks.browserStart);
