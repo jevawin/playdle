@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
 
     <!-- Icons -->
+    <!-- TODO SVG icons -->
     <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png" />
@@ -19,19 +20,24 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
     <link rel="manifest" href="/icons/manifest.json" />
-    <meta name="msapplication-TileColor" content="rgb(30, 41, 59)" />
+    <meta name="msapplication-TileColor" content="rgb(15, 23, 42)" />
     <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png" />
-    <meta name="theme-color" content="rgb(30, 41, 59)" />
+    <meta name="theme-color" content="rgb(15, 23, 42)" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="output.css" />
   </head>
   <body class="font-sans bg-slate-800 text-white">
+    <header class="flex items-center justify-between bg-slate-900 border-b-4 border-b-yellow-500 text-yellow-500 pb-4 mb-4 p-2 shadow font-mono">
+      <h1 class="text-3xl font-bold">Playdle</h1>
+      <p class="w-32">Wordle and other games.</p>
+      <!-- <img src="/icons/apple-icon-57x57.png" height="57" width="57" alt="Playdle Logo" class="h-[50px] w-auto" /> -->
+    </header>
     <main class="container mx-auto p-2">
       <% for (const [key, value] of Object.entries(sites)) { %>
       <div class="mb-6">
         <div class="mb-4">
-          <h1 class="font-bold text-2xl uppercase"><%= key %></h1>
+          <h1 class="font-bold text-2xl"><%= key %></h1>
           <p class=""><%= value.description %></p>
         </div>
         <div class="grid gap-2 grid-cols-2 md:grid-cols-4">

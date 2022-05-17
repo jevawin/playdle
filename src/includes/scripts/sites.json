@@ -1,51 +1,56 @@
 {
   "sites": {
-    "dle": {
+    "Wordle-like": {
       "description": "Classic Wordle, and the *dle homages.",
       "games": [
         {
           "name": "Wordle",
-          "description": "The original...and best?",
+          "description": "🔠 The original...and best?",
           "url": "https://www.nytimes.com/games/wordle/index.html"
         },
         {
           "name": "Worldle",
-          "description": "Guess the country.",
+          "description": "🌍 Guess the country.",
           "url": "https://worldle.teuteuf.fr"
         },
         {
           "name": "Heardle",
-          "description": "Guess the song.",
+          "description": "🎧 Guess the song.",
           "url": "https://www.heardle.app"
         },
         {
           "name": "Moviedle",
-          "description": "A movie in a second.",
+          "description": "🎬 A movie in a second.",
           "url": "https://www.moviedle.app"
         },
         {
           "name": "Posterdle",
-          "description": "A movie in poster.",
+          "description": "🏞 A movie in poster.",
           "url": "https://www.posterdle.com"
         },
         {
           "name": "Gamedle",
-          "description": "For gamers.",
+          "description": "🕹 For gamers.",
           "url": "http://www.gamedle.wtf/"
         },
         {
           "name": "Lewdle",
-          "description": "Like Wordle. A bit spicy 🌶.",
+          "description": "🍆 Sexy Wordle.",
           "url": "https://www.lewdlegame.com"
         },
         {
           "name": "Nerdle",
-          "description": "For number crunchers.",
+          "description": "🤓 Nerdy Wordle.",
           "url": "https://nerdlegame.com"
+        },
+        {
+          "name": "Turdle",
+          "description": "💩 Shitty Wordle.",
+          "url": "https://turdle.app"
         }
       ]
     },
-    "moredle": {
+    "Wordle plus": {
       "description": "Wordle, but more.",
       "games": [
         {
@@ -65,23 +70,18 @@
         },
         {
           "name": "Sedecordle",
-          "description": "Sixteen Wordles at once.",
-          "url": "https://www.sedecordle.com"
-        },
-        {
-          "name": "Hexacordle",
-          "description": "Your eyes will hurt.",
-          "url": "https://hexadecordle.co.uk/?mode=daily"
+          "description": "16 Wordles at once.",
+          "url": "https://www.sedecordle.com/?mode=daily"
         },
         {
           "name": "Duotrigordle",
-          "description": "Brain...bleeding.",
+          "description": "😵‍💫 32 Wordles at once.",
           "url": "https://duotrigordle.com/"
         }
       ]
     },
-    "nondle": {
-      "description": "Non-dle ways to waste 10 minutes. 💪",
+    "Not Wordle": {
+      "description": "Other ways to waste 10 minutes. 💪",
       "games": [
         {
           "name": "Framed",
@@ -100,7 +100,7 @@
         }
       ]
     },
-    "internationadle": {
+    "Internationaladle": {
       "description": "Wordle around the world. 🌎",
       "games": [
         {

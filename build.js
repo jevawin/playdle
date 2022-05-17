@@ -1,3 +1,6 @@
+// TODO callback tasks
+// TODO pipe to tasks
+// TODO run without recapturing if pics are < X days old
 const { exec } = require("node:child_process");
 require("dotenv").config();
 const prod = process.env.NODE_ENV === "production";
@@ -56,9 +59,9 @@ tasks.json = {
 };
 commands.push(tasks.json);
 
-/* Build: html */
-tasks.html = {
-  name: "html",
+/* Build: ejs */
+tasks.ejs = {
+  name: "ejs",
   args: [
     // ejs templates
     "npx",
@@ -84,7 +87,7 @@ tasks.html = {
   ],
   // disabled: true,
 };
-commands.push(tasks.html);
+commands.push(tasks.ejs);
 
 /* Build: icons */
 tasks.icons = {
@@ -140,17 +143,17 @@ if (!prod) {
   const watch = require("node-watch");
   const watchOptions = {
     recursive: true,
-    filter: /\.(html|css|js(on)?)$/,
+    filter: /\.(css|e?js(on)?)$/,
   };
   watch("src", watchOptions, (evt, name) => {
     if (evt === "update") {
-      for (const ext of ["css", "html", "js", "json"]) {
+      for (const ext of ["css", "ejs", "js", "json"]) {
         // Iterate over extensions, build if extension was saved
-        const re = new RegExp(`\.${ext}$`);
+        const re = new RegExp(`\\.${ext}$`);
         if (re.test(name)) execute([tasks[ext]]);
       }
-      // Also run tailwind for js/html
-      if (/js|html$/.test(name)) execute([tasks.css]);
+      // Also run tailwind for js/ejs
+      if (/e?js$/.test(name)) execute([tasks.css]);
       // Reload browsers
       execute([tasks.browserReload]);
     }
