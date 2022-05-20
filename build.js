@@ -84,6 +84,8 @@ tasks.ejs = {
     "--use-short-doctype",
     "--sort-attributes",
     "--sort-class-name",
+    "--minify-css",
+    "--minify-js"
   ],
   // disabled: true,
 };
