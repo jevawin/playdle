@@ -1,7 +1,7 @@
 {
   "sites": {
     "Wordle-like": {
-      "description": "Classic Wordle, and the *dle homages.",
+      "description": "Classic Wordle, and the *dle homages",
       "games": [
         {
           "name": "Wordle",
@@ -10,98 +10,98 @@
         },
         {
           "name": "Worldle",
-          "description": "🌍 Guess the country.",
+          "description": "🌍 Guess the country",
           "url": "https://worldle.teuteuf.fr"
         },
         {
           "name": "Heardle",
-          "description": "🎧 Guess the song.",
+          "description": "🎧 Guess the song",
           "url": "https://www.heardle.app"
         },
         {
           "name": "Moviedle",
-          "description": "🎬 A movie in a second.",
+          "description": "🎬 A movie in a second",
           "url": "https://www.moviedle.app"
         },
         {
           "name": "Posterdle",
-          "description": "🏞 A movie in poster.",
+          "description": "🏞 A movie in poster",
           "url": "https://www.posterdle.com"
         },
         {
           "name": "Gamedle",
-          "description": "🕹 For gamers.",
+          "description": "🕹 For gamers",
           "url": "http://www.gamedle.wtf/"
         },
         {
           "name": "Lewdle",
-          "description": "🍆 Sexy Wordle.",
+          "description": "🍆 Sexy Wordle",
           "url": "https://www.lewdlegame.com"
         },
         {
           "name": "Nerdle",
-          "description": "🤓 Nerdy Wordle.",
+          "description": "🤓 Nerdy Wordle",
           "url": "https://nerdlegame.com"
         },
         {
           "name": "Turdle",
-          "description": "💩 Shitty Wordle.",
+          "description": "💩 Shitty Wordle",
           "url": "https://turdle.app"
         }
       ]
     },
     "Wordle plus": {
-      "description": "Wordle, but more.",
+      "description": "Wordle, but more",
       "games": [
         {
           "name": "Dordle",
-          "description": "Two Wordles at once.",
+          "description": "Two Wordles at once",
           "url": "https://zaratustra.itch.io/dordle"
         },
         {
           "name": "Quordle",
-          "description": "Four Wordles at once.",
+          "description": "Four Wordles at once",
           "url": "https://www.quordle.com/#/"
         },
         {
           "name": "Octordle",
-          "description": "Eight Wordles at once.",
+          "description": "Eight Wordles at once",
           "url": "https://octordle.com"
         },
         {
           "name": "Sedecordle",
-          "description": "16 Wordles at once.",
+          "description": "16 Wordles at once",
           "url": "https://www.sedecordle.com/?mode=daily"
         },
         {
           "name": "Duotrigordle",
-          "description": "😵‍💫 32 Wordles at once.",
+          "description": "😵‍💫 32 Wordles at once",
           "url": "https://duotrigordle.com/"
         }
       ]
     },
     "Not Wordle": {
-      "description": "Other ways to waste 10 minutes. 💪",
+      "description": "Other ways to waste 10 minutes 💪",
       "games": [
         {
           "name": "Framed",
-          "description": "Guess the movie, a frame at a time.",
+          "description": "Guess the movie, a frame at a time",
           "url": "https://framed.wtf"
         },
         {
           "name": "High Score Day",
-          "description": "Also for gamers.",
+          "description": "Also for gamers",
           "url": "https://www.highscoreday.com"
         },
         {
           "name": "Sudoku",
-          "description": "Classic.",
+          "description": "Classic",
           "url": "https://www.nytimes.com/puzzles/sudoku/easy"
         }
       ]
     },
     "Internationaladle": {
-      "description": "Wordle around the world. 🌎",
+      "description": "Wordle around the world 🌎",
       "games": [
         {
           "name": "German Wordle",
