@@ -83,7 +83,7 @@
       // prep vars
       const storage = window.localStorage;
       const today = new Date();
-      const fulldate = `${today.getFullYear()}${today.getMonth()}${today.getFullYear()}`
+      const fulldate = `${today.getFullYear()}${today.getMonth()}${today.getDate()}`
 
       // clear past entries
       const visited = JSON.parse(storage.getItem(fulldate)) || [];
