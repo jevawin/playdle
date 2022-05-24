@@ -5,7 +5,7 @@ import { readFile } from "fs/promises";
 const settings = {
   width: 300,
   height: 225,
-  overwrite: false,
+  overwrite: true,
   removeElements: ["#pz-gdpr", "[id*='sp_message_container']"],
 };
 
