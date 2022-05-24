@@ -47,6 +47,16 @@
           "name": "Turdle",
           "description": "💩 Shitty Wordle",
           "url": "https://turdle.app"
+        },
+        {
+          "name": "Foodle",
+          "description": "Hungry Wordle",
+          "url": "https://food-le.co"
+        },
+        {
+          "name": "Globle",
+          "description": "Worldle...but not",
+          "url": "https://globle-game.com"
         }
       ]
     },
