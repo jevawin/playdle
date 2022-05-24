@@ -15,8 +15,8 @@ const sites = JSON.parse(await readFile("src/includes/scripts/sites.json")).site
 // loop and capture
 (async () => {
   for await (const [key, value] of Object.entries(sites)) {
-    for await (const game of value.games) {
-      for await (const ext of ["webp", "jpeg"]) {
+    for (const game of value.games) {
+      for (const ext of ["webp", "jpeg"]) {
         const localSettings = settings;
         localSettings.type = ext;
         await captureWebsite.file(game.url, `dist/screenshots/${encodeURI(game.name.replaceAll(" ", "_")).toLowerCase()}.${ext}`, settings);
