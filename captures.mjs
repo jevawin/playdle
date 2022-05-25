@@ -6,6 +6,7 @@ const settings = {
   width: 300,
   height: 225,
   overwrite: true,
+  type: "jpeg",
   removeElements: ["#pz-gdpr", "[id*='sp_message_container']"],
 };
 
@@ -16,11 +17,11 @@ const sites = JSON.parse(await readFile("src/includes/scripts/sites.json")).site
 (async () => {
   for await (const [key, value] of Object.entries(sites)) {
     for (const game of value.games) {
-      for (const ext of ["webp", "jpeg"]) {
-        const localSettings = settings;
-        localSettings.type = ext;
-        await captureWebsite.file(game.url, `dist/screenshots/${encodeURI(game.name.replaceAll(" ", "_")).toLowerCase()}.${ext}`, settings);
-      }
-    };
+      await captureWebsite.file(
+        game.url,
+        `dist/screenshots/${encodeURI(game.name.replaceAll(" ", "_")).toLowerCase()}.${settings.type}`,
+        settings
+      );
+    }
   }
 })();
