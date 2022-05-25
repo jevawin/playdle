@@ -124,7 +124,7 @@
         const played = () => {
           // prep vars
           const today = new Date();
-          const fulldate = `${today.getFullYear()}${today.getMonth()}${today.getFullYear()}`; // resets after 1 day
+          const fulldate = `${today.getFullYear()}${today.getMonth()}${today.getDate()}`; // resets after 1 day
 
           // clear past entries
           const visited = JSON.parse(storage.getItem(fulldate)) || [];
