@@ -1,7 +1,6 @@
-// TODO callback tasks
-// TODO pipe to tasks
+// TODO convert to JS functions
 // TODO run without recapturing if pics are < X days old
-const { exec } = require("node:child_process");
+const { spawn } = require("node:child_process");
 require("dotenv").config();
 const prod = process.env.NODE_ENV === "production";
 const tasks = {};
@@ -16,19 +15,29 @@ function init() {
 async function execute(commands) {
   for (const command of commands) {
     if (!command.disabled) {
-      const cmd = command.args.join(" ");
+      const cmd = command.args.shift();
       const name = command.name;
 
-      console.info(`Running: ${name} (${cmd})`);
+      console.info(`Running: ${name} (${cmd} ${command.args.join(" ")})`);
 
-      exec(cmd, (error, stdout, stderr) => {
-        if (error) {
-          console.error(`Error in command: ${name}. Error: ${error}`);
+      const exec = spawn(cmd, command.args);
+      const stdChunks = [];
+      const stdErrChunks = [];
+
+      exec.stdout.on("data", (stdout) => {
+        if (stdout && /[\w\-]+/.test(stdout)) console.log(`${stdout}`.trim());
+      });
+
+      exec.stderr.on("data", (error) => {
+        if (error && /[\w+\-]/.test(error)) console.warn(`${name}: ${error}`.trim());
+      });
+
+      exec.on("close", (code) => {
+        if (code === 0) {
+          console.log(`Complete: ${name}`);
+        } else {
           process.exit();
         }
-        if (stdout && stdout !== "") console.log(`${name}: ${stdout}`);
-        if (stderr && stderr !== "") console.error(`${name}: ${stderr}`);
-        console.log(`Complete: ${name}`);
       });
     }
   }
@@ -85,7 +94,7 @@ tasks.ejs = {
     "--sort-attributes",
     "--sort-class-name",
     "--minify-css",
-    "--minify-js"
+    "--minify-js",
   ],
   // disabled: true,
 };
@@ -117,6 +126,8 @@ commands.push(...tasks.captures);
 /* DEV */
 
 /* BROWSER-SYNC */
+const bs = require("browser-sync");
+if (bs.active) bs.exit(); // kill browser-sync
 tasks.browserStart = {
   name: "browser-sync",
   args: [

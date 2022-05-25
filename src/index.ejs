@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <title>Playdle. Wordle and other games.</title>
     <meta charset="utf-8" />
@@ -48,7 +47,7 @@
             `screenshots/${id}` %>
           <div class="rounded overflow-hidden shadow flex flex-col justify-start p-2 bg-slate-600 bg-[url('<%= image %>')]">
             <picture>
-              <source srcset="<%= image %>.webp" type="image/webp" />
+              <!--<source srcset="<%= image %>.webp" type="image/webp" />-->
               <img src="<%= image %>.jpeg" class="w-full h-auto rounded overflow-hidden" loading="lazy" alt="<%= game.name %>: <%= game.description %>" height="225" width="300" />
             </picture>
             <h2 class="font-bold text-lg mt-2"><%= game.name %></h2>
