@@ -47,6 +47,21 @@
           "name": "Turdle",
           "description": "💩 Shitty Wordle",
           "url": "https://turdle.app"
+        },
+        {
+          "name": "Foodle",
+          "description": "Hungry Wordle",
+          "url": "https://food-le.co"
+        },
+        {
+          "name": "Flagdle",
+          "description": "Guess the flag",
+          "url": "https://www.flagdle.org"
+        },
+        {
+          "name": "Stadiumdle",
+          "description": "For football nerds",
+          "url": "https://www.stadiumdle.com"
         }
       ]
     },
