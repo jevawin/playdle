@@ -57,6 +57,16 @@
           "name": "Globle",
           "description": "Worldle...but not",
           "url": "https://globle-game.com"
+        },
+        {
+          "name": "Flagdle",
+          "description": "Guess the flag",
+          "url": "https://www.flagdle.org"
+        },
+        {
+          "name": "Stadium",
+          "description": "For football nerds",
+          "url": "https://www.stadiumdle.com"
         }
       ]
     },
