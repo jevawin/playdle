@@ -9,6 +9,11 @@
           "url": "https://www.nytimes.com/games/wordle/index.html"
         },
         {
+          "name": "Waffle",
+          "description": "🧇 Weird Wordle",
+          "url": "https://wafflegame.net"
+        },
+        {
           "name": "Worldle",
           "description": "🌍 Guess the country",
           "url": "https://worldle.teuteuf.fr"
@@ -17,6 +22,11 @@
           "name": "Heardle",
           "description": "🎧 Guess the song",
           "url": "https://www.heardle.app"
+        },
+        {
+          "name": "Emovi",
+          "description": "🦖🎢 A movie in emoji",
+          "url": "https://emovi.teuteuf.fr"
         },
         {
           "name": "Moviedle",
