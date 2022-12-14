@@ -191,7 +191,7 @@
         {
           "name": "Turkish Wordle",
           "description": "🇹🇷",
-          "url": "https://www.bundle.app/wordle-tr/"
+          "url": "https://wordleturkce.bundle.app/"
         },
         {
           "name": "Hindi Wordle",
@@ -206,7 +206,7 @@
         {
           "name": "Polish Wordle",
           "description": "🇵🇱",
-          "url": "https://literalnie.fun/"
+          "url": "https://literalnie.fun"
         }
       ]
     }
