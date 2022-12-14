@@ -6,7 +6,8 @@
   "scripts": {
     "build": "NODE_ENV=production node build.js",
     "dev": "node build.js",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "update-nvmrc": "echo $(nvm current) > .nvmrc"
   },
   "author": "Jamie Evawin",
   "license": "ISC",
