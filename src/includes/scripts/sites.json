@@ -24,24 +24,14 @@
           "url": "https://www.heardle.app"
         },
         {
-          "name": "Figure",
-          "description": "🕺 Cutting shapes",
-          "url": "https://figure.game/en"
-        },
-        {
-          "name": "Emovi",
-          "description": "🦖🎢 A movie in emoji",
-          "url": "https://emovi.teuteuf.fr"
-        },
-        {
           "name": "Moviedle",
           "description": "🎬 A movie in a second",
-          "url": "https://www.moviedle.app"
+          "url": "https://likewisetv.com/arcade/moviedle#gameEmbedIFrame"
         },
         {
           "name": "Posterdle",
           "description": "🏞 A movie in poster",
-          "url": "https://www.posterdle.com"
+          "url": "https://likewisetv.com/arcade/posterdle#gameEmbedIFrame"
         },
         {
           "name": "Gamedle",
@@ -80,6 +70,36 @@
         }
       ]
     },
+    "Not Wordle": {
+      "description": "Other ways to waste 10 minutes 💪",
+      "games": [
+        {
+          "name": "Figure",
+          "description": "🕺 Cutting shapes",
+          "url": "https://figure.game/en"
+        },
+        {
+          "name": "Emovi",
+          "description": "🦖🎢 A movie in emoji",
+          "url": "https://emovi.teuteuf.fr"
+        },
+        {
+          "name": "Framed",
+          "description": "Guess the movie, a frame at a time",
+          "url": "https://framed.wtf"
+        },
+        {
+          "name": "High Score Day",
+          "description": "Also for gamers",
+          "url": "https://www.highscoreday.com"
+        },
+        {
+          "name": "Sudoku",
+          "description": "Classic",
+          "url": "https://www.nytimes.com/puzzles/sudoku/easy"
+        }
+      ]
+    },
     "Wordle plus": {
       "description": "Wordle, but more",
       "games": [
@@ -107,26 +127,6 @@
           "name": "Duotrigordle",
           "description": "😵‍💫 32 Wordles at once",
           "url": "https://duotrigordle.com/"
-        }
-      ]
-    },
-    "Not Wordle": {
-      "description": "Other ways to waste 10 minutes 💪",
-      "games": [
-        {
-          "name": "Framed",
-          "description": "Guess the movie, a frame at a time",
-          "url": "https://framed.wtf"
-        },
-        {
-          "name": "High Score Day",
-          "description": "Also for gamers",
-          "url": "https://www.highscoreday.com"
-        },
-        {
-          "name": "Sudoku",
-          "description": "Classic",
-          "url": "https://www.nytimes.com/puzzles/sudoku/easy"
         }
       ]
     },
